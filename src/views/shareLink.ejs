@@ -1,0 +1,10 @@
+<%- include('layout', { title: 'Share Link' }) %>
+
+<div class="max-w-2xl mx-auto bg-white p-8 rounded shadow">
+    <h2 class="text-2xl font-bold mb-6">Share Link Generated</h2>
+    <p class="mb-4">Share this link with others to give them access to the folder:</p>
+    <input type="text" value="<%= shareLink %>" readonly class="w-full p-2 border rounded mb-4">
+    <button onclick="navigator.clipboard.writeText('<%= shareLink %>')" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">
+        Copy Link
+    </button>
+</div>
